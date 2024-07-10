@@ -1,0 +1,108 @@
+.condition-container {
+  width: 100%;
+  margin-top: 1rem;
+  background-color: #12192c;
+  border-radius: 10px;
+  padding-bottom: 10px;
+}
+.movie-desc {
+  display: flex;
+  width: 100%;
+}
+.movie-desc div {
+  margin-bottom: 1rem;
+}
+h3 {
+  color: white;
+}
+.movie-poster {
+  display: flex;
+  justify-content: center;
+}
+.movie-poster img {
+  width: 70%;
+  height: auto;
+  margin-top: 1rem;
+  margin-bottom: auto;
+  border-radius: 7px;
+}
+.movie-details {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding-right: 5px;
+}
+.movie-details h1 {
+  font-weight: 100;
+  color: white;
+}
+.star-component {
+  display: flex;
+  width: 100%;
+}
+.star-component span {
+  font-weight: 600;
+  font-size: 24px;
+  color: white;
+  margin-right: 0.7rem;
+}
+.movie-details .star-component .star-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 0;
+  width: 30%; /* Adjust the width to auto or a suitable value */
+  height: auto;
+  font-size: 17px;
+  color: #ffffff; /* Gold color for the filled stars */
+}
+.movie-desc .movie-details .movie-subdetails {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.movie-details .movie-subdetails div {
+  padding: 15px 0;
+}
+.movie-details .movie-subdetails div span:first-child {
+  opacity: 0.7;
+  color: rgb(217, 217, 217);
+}
+.movie-details .movie-subdetails div span:last-child {
+  margin-bottom: 0;
+}
+.movie-details .movie-subdetails span {
+  color: white;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.movie-details .genres div span {
+  margin-right: 10px;
+  color: #10141e;
+  font-size: 14px;
+  font-weight: bolder;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.movie-details .synopsis p {
+  color: white;
+  font-size: 15px;
+}
+.movie-details .casts div {
+  display: flex;
+  flex-wrap: wrap;
+}
+.movie-details .casts div span {
+  color: white;
+  font-size: 15px;
+  padding: 5px 10px;
+  margin: 4px;
+  border: 1px solid white;
+  border-radius: 5px;
+}

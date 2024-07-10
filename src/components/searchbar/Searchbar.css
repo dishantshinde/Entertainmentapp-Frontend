@@ -1,0 +1,36 @@
+/* SearchBar.css */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  padding: 10px 0px;
+  margin-top: 10px;
+  color: white;
+  width: 100%;
+  max-width: 400px;
+
+  /* Ensure the search bar is above other elements */
+}
+
+.search-bar input {
+  background-color: transparent;
+  font-family: "Poppins";
+  border: none;
+  color: white;
+  outline: none;
+  padding: 10px;
+  font-size: 15px;
+  width: 100%;
+}
+
+.search-bar .search-icon {
+  font-size: 15px;
+  opacity: 0.7;
+}
+.search-bar .search-icon.active {
+  opacity: 1;
+}
+.search-bar .search-icon:hover {
+  cursor: pointer;
+}

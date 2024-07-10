@@ -1,0 +1,81 @@
+.msCont {
+  width: 100%;
+  height: auto;
+}
+.msCont h2 {
+  color: white;
+}
+.msGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.item-img img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.item-details {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+  color: white;
+}
+.item-details span {
+  margin-right: 10px;
+  opacity: 0.7;
+  font-size: 12px;
+}
+
+.item-details span:last-child {
+  margin-right: 0; /* To remove the margin from the last span */
+}
+.item-desc h4 {
+  color: white;
+  margin: 0;
+  margin-top: 10px;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+}
+.item-desc .item-details .movie-icon {
+  margin-right: 5px;
+}
+.item-desc .item-details .movie-icon svg {
+}
+.grid-item {
+  transition: transform 0.2s ease;
+  position: relative;
+}
+.grid-item:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.item-bookmark-icon {
+  width: 20px;
+  height: 20px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5a698f;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.item-bookmark-icon svg {
+  font-size: 14px;
+  color: white;
+  z-index: 100;
+}
+.item-desc .item-details .rating {
+  display: flex;
+}
+.item-desc .item-details .rating svg {
+  margin-left: 2px;
+  font-size: 13px;
+}

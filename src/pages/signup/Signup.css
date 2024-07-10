@@ -1,0 +1,65 @@
+.form-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #161d2f;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.form-container h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #5a698f;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #fc4747;
+  border: none;
+  margin-top: 10px;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #e03c3c;
+}
+.login-prompt {
+  display: inline-block; /* Ensures the margin works */
+  margin-top: 10px;
+  color: #5a698f;
+  font-size: small;
+}
+
+/* Style for the login link */
+.login-prompt a {
+  color: #fc4747;
+  text-decoration: none;
+}
+
+/* Hover effect for the login link */
+.login-prompt a:hover {
+  text-decoration: underline;
+}
+.check-password {
+  color: rgb(197, 0, 0);
+  font-size: smaller;
+}

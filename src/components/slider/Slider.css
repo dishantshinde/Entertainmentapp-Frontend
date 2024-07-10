@@ -1,0 +1,78 @@
+.slider {
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.createSlider h3 {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: normal;
+}
+.data-list-container {
+  position: relative;
+  width: 95vw;
+  overflow-x: hidden;
+}
+.data-list {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.card {
+  position: relative;
+  margin-right: 20px;
+  min-width: 25rem;
+  transition: transform 0.2s ease;
+}
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+}
+.card:hover img {
+  opacity: 1;
+}
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  opacity: 0.7;
+}
+
+.show-desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 15px;
+}
+
+.show-detail {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.show-detail ul {
+  display: flex;
+  list-style-type: disc; /* Set the bullet style */
+  color: white; /* Set the text color */
+  margin: 0;
+  padding: 0;
+  opacity: 0.7;
+}
+
+.show-detail li {
+  margin-left: 18px;
+  font-size: 11px; /* Set the font size */
+}
+
+.show-desc h4 {
+  margin: 0;
+  font-size: 15px;
+  color: #fffdfd;
+  font-weight: bolder;
+  margin-left: 7px;
+}
+.show-desc .show-detail .movie-icon {
+  margin-right: 5px;
+}

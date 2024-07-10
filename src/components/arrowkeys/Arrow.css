@@ -1,0 +1,34 @@
+.arrows {
+  display: flex;
+  padding: 0 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow-left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  margin-left: 10px;
+}
+.arrow-right {
+  position: absolute;
+  top: 50%;
+  right: 5.1rem;
+  transform: translateY(-50%);
+}
+.arrows .arrow-left,
+.arrow-right {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 50%;
+  background-color: white;
+  color: #161d2f;
+  z-index: 100;
+}

@@ -1,0 +1,76 @@
+/* Reset body and html styles */
+
+/* Container for the form */
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #161d2f;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+/* Style for the heading */
+.container h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Style for the input fields */
+.container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #5a698f;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+/* Placeholder text color */
+.container input::placeholder {
+  color: #5a698f;
+}
+
+/* Style for the button */
+.container button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #fc4747;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Hover effect for the button */
+.container button:hover {
+  background-color: #e03c3c;
+}
+.signup-prompt,
+.login-prompt {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: smaller;
+}
+
+.signup-prompt a,
+.login-prompt a {
+  margin-left: 5px;
+  color: #fc4747;
+  text-decoration: none;
+  font-size: smaller;
+}
