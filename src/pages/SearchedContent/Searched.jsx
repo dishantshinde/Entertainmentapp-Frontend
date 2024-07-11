@@ -7,7 +7,7 @@ export default function Searched() {
   console.log("searched data", searchresults);
   return (
     <div className="content-container">
-      <SearchBar />
+      <SearchBar searchedHistory={searchresults.searchedtext} />
       <div className="searched-results">
         <h3>{`Found ${searchresults.data.length} results for '${searchresults.searchedtext}'`}</h3>
       </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Searchbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -6,13 +6,16 @@ import { useDispatch } from "react-redux";
 import { fetchContentByName } from "../../store";
 import { useNavigate } from "react-router-dom";
 
-export default function SearchBar() {
+export default function SearchBar({ searchedHistory = null }) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [searchvalue, setsearchValue] = useState(null);
   const handleChange = (value) => {
     setsearchValue(value);
   };
+  useEffect(() => {
+    if (searchedHistory) setsearchValue(searchedHistory);
+  }, [searchedHistory]);
   const handlesubmit = (e) => {
     if (e.type === "click") {
       dispatch(fetchContentByName(searchvalue));

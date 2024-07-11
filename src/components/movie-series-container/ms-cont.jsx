@@ -188,7 +188,10 @@ function GridItem({
           <span>
             {item.certification || (
               <span className="rating">
-                {item.vote_average.toFixed(1)} <FontAwesomeIcon icon={faStar} />{" "}
+                {item.vote_average !== undefined
+                  ? item.vote_average.toFixed(1)
+                  : "NR"}
+                <FontAwesomeIcon icon={faStar} />{" "}
               </span>
             )}
           </span>
