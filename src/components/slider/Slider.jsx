@@ -35,6 +35,15 @@ export default function Slider({ data, contentType, title }) {
     },
     [sliderPosition, data.length]
   );
+  const handleShowArrow = (e) => {
+    if (window.innerWidth > 821) {
+      if (e.type === "mouseenter") {
+        setshowArrow(true);
+      } else {
+        setshowArrow(false);
+      }
+    }
+  };
   useEffect(() => {
     if (window.innerWidth <= 821) {
       setshowArrow(true);
@@ -48,7 +57,7 @@ export default function Slider({ data, contentType, title }) {
         handleArrowClick={handleArrowClick}
         sliderPosition={sliderPosition}
         showArrow={showArrow}
-        setshowArrow={setshowArrow}
+        handleShowArrow={handleShowArrow}
         handleSelect={handleSelect}
         contentType={contentType}
         title={title}
@@ -61,7 +70,7 @@ function CreateSlider({
   handleArrowClick,
   sliderPosition,
   showArrow,
-  setshowArrow,
+  handleShowArrow,
   handleSelect,
   contentType,
   title,
@@ -71,8 +80,8 @@ function CreateSlider({
       <h3>{title}</h3>
       <div
         className="data-list-container"
-        onMouseEnter={() => setshowArrow(true)}
-        onMouseLeave={() => setshowArrow(false)}
+        onMouseEnter={(e) => handleShowArrow(e)}
+        onMouseLeave={(e) => handleShowArrow(e)}
       >
         {showArrow && <Arrow handleArrowClick={handleArrowClick} type="left" />}
         <div
