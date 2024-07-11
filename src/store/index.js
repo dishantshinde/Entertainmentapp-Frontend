@@ -171,7 +171,7 @@ export const fetchUserBookmarked = createAsyncThunk(
     const {
       data: { content },
     } = await axios.get(
-      `http://localhost:5000/api/user/getbookmarked/${email}`
+      `https://entertainmentapp-backend-nt3b.onrender.com/api/user/getbookmarked/${email}`
     );
     console.log("fetched bookmarks", content);
     return content;

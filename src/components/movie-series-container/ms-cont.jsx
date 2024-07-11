@@ -100,10 +100,13 @@ function GridItem({
 
   const addToBookmarked = async (item) => {
     try {
-      await axios.post("http://localhost:5000/api/user/add", {
-        email,
-        data: item,
-      });
+      await axios.post(
+        "https://entertainmentapp-backend-nt3b.onrender.com/api/user/add",
+        {
+          email,
+          data: item,
+        }
+      );
       console.log("added to bookmarked list from client");
       handleBookmarkToggle(item.id, true);
     } catch (error) {
@@ -113,10 +116,13 @@ function GridItem({
 
   const removeFromBookmarked = async (item) => {
     try {
-      await axios.put("http://localhost:5000/api/user/remove", {
-        email,
-        movieId: item.id,
-      });
+      await axios.put(
+        "https://entertainmentapp-backend-nt3b.onrender.com/api/user/remove",
+        {
+          email,
+          movieId: item.id,
+        }
+      );
       console.log("removed from bookmarked list from client");
       handleBookmarkToggle(item.id, false);
       setBookmarkchange((prev) => !prev);
