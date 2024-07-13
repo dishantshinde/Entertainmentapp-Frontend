@@ -68,20 +68,21 @@ export default function MsCont({
     <div className="msCont">
       <h2>{title}</h2>
       <div className="msGrid">
-        {data.map((item) => {
-          return (
-            <GridItem
-              item={item}
-              key={item.id}
-              contentType={contentType}
-              handleClick={handleClick}
-              email={email}
-              isBookmarked={!!bookmarkedItems[item.id]}
-              handleBookmarkToggle={handleBookmarkToggle}
-              setBookmarkchange={setBookmarkchange}
-            />
-          );
-        })}
+        {data.length > 0 &&
+          data.map((item) => {
+            return (
+              <GridItem
+                item={item}
+                key={item.id}
+                contentType={contentType}
+                handleClick={handleClick}
+                email={email}
+                isBookmarked={!!bookmarkedItems[item.id]}
+                handleBookmarkToggle={handleBookmarkToggle}
+                setBookmarkchange={setBookmarkchange}
+              />
+            );
+          })}
       </div>
     </div>
   );

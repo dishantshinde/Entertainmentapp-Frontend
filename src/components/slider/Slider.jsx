@@ -94,14 +94,15 @@ function CreateSlider({
             }px)`,
           }}
         >
-          {data.map((show) => (
-            <SliderCard
-              key={show.id}
-              show={show}
-              handleSelect={handleSelect}
-              contentType={contentType}
-            />
-          ))}
+          {data.length > 0 &&
+            data.map((show) => (
+              <SliderCard
+                key={show.id}
+                show={show}
+                handleSelect={handleSelect}
+                contentType={contentType}
+              />
+            ))}
         </div>
         {showArrow && (
           <Arrow handleArrowClick={handleArrowClick} type="right" />

@@ -23,6 +23,8 @@ export default function Homepage() {
   const userRecommendations = useSelector(
     (state) => state.netflix.recommendations
   );
+  const contenttype =
+    userRecommendations.length > 0 ? userRecommendations[0].media_type : "";
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(firebaseAuth, (currentuser) => {
@@ -79,7 +81,7 @@ export default function Homepage() {
             <div className="slider-component">
               <Slider
                 data={userRecommendations}
-                contentType="movie"
+                contentType={contenttype}
                 title="Recommendations"
               />
             </div>
