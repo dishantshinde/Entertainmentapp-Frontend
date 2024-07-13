@@ -31,11 +31,6 @@ export default function Login() {
     try {
       const { email, password } = formValues;
       await signInWithEmailAndPassword(firebaseAuth, email, password);
-
-      // Optionally, you can send a request to the backend if needed
-      // For example, to log the login event
-      await axios.post(`${apiUrl}/user/login`, { email });
-
       navigate("/"); // Redirect to home page or wherever needed
     } catch (err) {
       console.error(err);

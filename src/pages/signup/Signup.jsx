@@ -1,11 +1,8 @@
 import React, { useState } from "react";
-import axios from "axios";
 import "./Signup.css";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { firebaseAuth } from "../../utils/firebase-config";
-
-const apiUrl = process.env.REACT_APP_API_URL; // Use the environment variable
 
 export default function Signup() {
   const navigate = useNavigate();
@@ -55,12 +52,6 @@ export default function Signup() {
           password
         );
         alert("User created successfully!");
-
-        // Send the user data to your backend server
-        await axios.post(`${apiUrl}/user/signup`, {
-          email: userCredential.user.email,
-          uid: userCredential.user.uid,
-        });
 
         navigate("/login"); // Redirect to login page or wherever needed
       } catch (err) {
