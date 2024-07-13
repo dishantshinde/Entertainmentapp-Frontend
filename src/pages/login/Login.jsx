@@ -1,20 +1,23 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "./Login.css";
 import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { firebaseAuth } from "../../utils/firebase-config";
+
+const apiUrl = process.env.REACT_APP_API_URL; // Use the environment variable
+
 export default function Login() {
   const navigate = useNavigate();
-  // Initialize state for form values
   const [formValues, setFormValues] = useState({
     email: "",
     password: "",
   });
-  onAuthStateChanged(firebaseAuth, (currentuser) => {
-    if (currentuser) navigate("/");
+
+  onAuthStateChanged(firebaseAuth, (currentUser) => {
+    if (currentUser) navigate("/");
   });
 
-  // Handle input changes
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormValues((prevValues) => ({
@@ -23,16 +26,20 @@ export default function Login() {
     }));
   };
 
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const { email, password } = formValues;
       await signInWithEmailAndPassword(firebaseAuth, email, password);
-      navigate("/"); // Redirect to the home page or dashboard after successful login
+
+      // Optionally, you can send a request to the backend if needed
+      // For example, to log the login event
+      await axios.post(`${apiUrl}/user/login`, { email });
+
+      navigate("/"); // Redirect to home page or wherever needed
     } catch (err) {
       console.error(err);
-      alert("Error logging", err.message);
+      alert("Error logging in: " + err.message);
     }
   };
 
